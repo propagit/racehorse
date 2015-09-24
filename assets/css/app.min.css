@@ -1,0 +1,17 @@
+.app-container {
+  padding-top: 30px; }
+
+/* Common Modal To display Messages*/
+#message-modal .modal-header {
+  padding-bottom: 30px; }
+#message-modal .modal-body {
+  text-align: center; }
+
+/*
+	Helpers
+*/
+.pull {
+  float: right; }
+
+.text-center {
+  text-align: center; }

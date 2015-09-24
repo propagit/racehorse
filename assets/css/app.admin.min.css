@@ -1,0 +1,20 @@
+/*
+	Login 
+*/
+.login-block {
+  max-width: 300px;
+  margin: auto;
+  padding-top: 100px; }
+
+.competition {
+  margin-top: 100px;
+  text-align: center; }
+
+/*
+	Helpers
+*/
+.pull {
+  float: right; }
+
+.text-center {
+  text-align: center; }

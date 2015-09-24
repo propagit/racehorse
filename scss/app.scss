@@ -1,0 +1,26 @@
+
+
+.app-container{
+	padding-top:30px;	
+}
+
+
+
+
+
+/* Common Modal To display Messages*/
+#message-modal{
+	.modal-header{
+		padding-bottom:30px;	
+	}
+	
+	.modal-body{
+		text-align:center;	
+	}
+}
+
+
+
+
+
+@import "helpers.scss";
