@@ -17,7 +17,10 @@ class Competition extends CI_Controller {
 	
 	function index()
 	{
-		redirect('competition/entry');
+		//$this->load->view('common/header');
+		//$this->load->view('competition/enter_form');
+		//$this->load->view('common/footer');
+                redirect('competition/entry');
 	}
 	
 	function entry($token = '')
@@ -30,7 +33,7 @@ class Competition extends CI_Controller {
 		$this->load->view('common/footer');	
 	}
 	
-	function enter_competition(){
+	/*function enter_competition(){
 		echo json_encode(
 					array(
 							'status' => 'ok',
@@ -38,13 +41,14 @@ class Competition extends CI_Controller {
 						)
 				);
 		return;	
-	}
+	} */
 	
-	function _enter_competition()
+	function enter_competition()
 	{
 		$input = $_POST;
 		# validate data
-		if(!$input['firstname'] || !$input['lastname'] || !$input['email'] || !$input['state'] || !$input['country']){
+                
+		if(!$input['firstname'] || !$input['lastname'] || !$input['email'] || !$input['state'] || !isset($input['owned_racehorse']) || !isset($input['gender']) ){
 			
 			echo json_encode(
 					array(
@@ -103,8 +107,11 @@ class Competition extends CI_Controller {
 							'firstname' => $data['firstname'],
 							'lastname' => $data['lastname'],
 							'email' => $data['email'],
+                                                        'mobile' => $data['mobile'],
+                                                        'owned_racehorse' => $data['owned_racehorse'],
+                                                        'gender' => $data['gender'],
 							'state' => $data['state'],
-							'country' => $data['country'],
+							//'country' => $data['country'],
 							'user_token' => md5(SALT.$data['email'])
 						);
 		

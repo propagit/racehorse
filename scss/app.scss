@@ -1,10 +1,41 @@
 
+// Font definition
+@font-face {
+  font-family: 'ChaletComprime-CologneSixty';
+  src: url('../fonts/ChaletComprime-CologneSixty.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/ChaletComprime-CologneSixty.woff') format('woff'),
+      url('../fonts/ChaletComprime-CologneSixty.ttf')  format('truetype'),
+      url('../fonts/ChaletComprime-CologneSixty.svg#ChaletComprime-CologneSixty') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-chalet{
+    font-family: 'ChaletComprime-CologneSixty';
+}
+
+// Colors
+.grey{
+    color: #636466;
+}
+
+
+h1{
+    font-size: 100px;
+    line-height: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
 
 .app-container{
 	padding-top:30px;	
 }
 
-
+.leading-text{
+    @extend .font-chalet;
+    @extend .grey;
+    padding-top: 30px;
+}
 
 
 
