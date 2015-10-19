@@ -76,7 +76,7 @@ class Competition extends CI_Controller {
 		if($duplicate){
 			# even if the main entry is duplicate we do want them to send invites
 			# however they don't get added to the competition pool 
-			$this->_insert_invites($duplicate['entry_id'],$input);	
+			//$this->_insert_invites($duplicate['entry_id'],$input);	
 		}else{
 			# if new entry add to competition entry
 			# add to competition pool
@@ -84,7 +84,7 @@ class Competition extends CI_Controller {
 			$entry_id = $this->_insert_new_competition($input);
 			if($entry_id){
 				$this->_insert_competition_pool($entry_id,$input);
-				$this->_insert_invites($entry_id,$input);	
+				//$this->_insert_invites($entry_id,$input);	
 				
 				# send confirmation
 				# $this->_send_confirmation($entry_id);
