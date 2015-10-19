@@ -172,8 +172,8 @@
     }
 
     function enter_competition() {
-        $('#message-modal-content').html('<i class="fa fa-spinner fa-spin"></i> Please wait while we submit your entry.');
-        $('#message-modal').modal('show');
+        //$('#message-modal-content').html('<i class="fa fa-spinner fa-spin"></i> Please wait while we submit your entry.');
+        //$('#message-modal').modal('show');
         $.ajax({
             type: "POST",
             url: "<?= base_url(); ?>competition/enter_competition",
