@@ -105,7 +105,7 @@
                     </div>
                 </div>
                 <div class="col-xs-12">
-                    <button class="btn btn-success" type="button" id="enter-competition" style="float:right;">Enter</button>
+                    <button class="btn btn-success" type="button" id="enter-additional-friends" style="float:right;">Enter</button>
                 </div>
                 <div class="col-xs-12">
                     <button class="btn btn-success" type="button" id="additional-friends-no-thanks" style="float:right;">No Thanks</button>
@@ -136,6 +136,12 @@
         // submit form
         $('#enter-competition').click(function () {
             enter_competition();
+            //$('#competition-form').submit();
+        });
+        
+        // additional-friends form
+        $('#enter-additional-friends').click(function () {
+            enter_additional_friends();
             //$('#competition-form').submit();
         });
         
@@ -190,6 +196,8 @@
                     //var html = '<form id="additional-friends-form"><div class="col-xs-12 friend-box"><div class="form-group"><input type="text" placeholder="Friend\'s Name" class="form-control" name="friend_name[]"></div><div class="form-group"><input type="text" placeholder="Friend\'s Email" class="form-control friend-email" name="friend_email[]"></div></div><div class="col-xs-12"><button class="btn btn-success" type="button" id="enter-additional-friends" style="float:right;">Enter</button></div></div></div><div class="col-xs-12"><button class="btn btn-success" type="button" id="additional-friends-no-thanks" style="float:right;">No Thanks</button></div></form>';
                    //$('.competition-form-wrap').append(html);
                    $('#additional-friends-form').show();
+                   var html = '<input name="token" type="hidden" value="'+ data['token']+'"><input name="email" type="hidden" value="'+data['email']+'"><input name="entry_id" type="hidden" value="'+data['entry_id']+'">';
+                   $('#additional-friends-form').append(html);
                 } else {
                     $('#message-modal-content').html('<span class="text-danger">' + data['msg'] + '</span>');
                     $('#anyModalFooter').modal('show');
@@ -197,6 +205,24 @@
             }
         });
 
+    }
+    
+    function enter_additional_friends(){
+        $.ajax({
+            type: "POST",
+            url: "<?= base_url(); ?>competition/insert_invites",
+            data: $('#additional-friends-form').serialize(),
+            dataType: "JSON",
+            success: function (data) {
+                if (data['status'] == 'ok') {
+                    $('#additional-friends-form').remove();
+                    $('#facebook-part').show();
+                } else {
+                    $('#message-modal-content').html('<span class="text-danger">' + data['msg'] + '</span>');
+                    $('#anyModalFooter').modal('show');
+                }
+            }
+        });
     }
     
     function end_part() {

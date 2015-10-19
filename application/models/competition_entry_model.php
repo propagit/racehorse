@@ -70,5 +70,13 @@ class Competition_entry_model extends CI_Model{
 						->get('competition_entry')
 						->result_array();	
 	}
+        
+        function get_entry_id($email)
+        {
+            return $this->db->select('entry_id')
+                                    ->where('email',$email)
+                                    ->get('competition_entry');
+                                    
+        }
 	
 }

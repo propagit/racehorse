@@ -76,7 +76,8 @@ class Competition extends CI_Controller {
 		if($duplicate){
 			# even if the main entry is duplicate we do want them to send invites
 			# however they don't get added to the competition pool 
-			//$this->_insert_invites($duplicate['entry_id'],$input);	
+			//$this->_insert_invites($duplicate['entry_id'],$input);
+                        $entry_id = $this->Competition_entry_model->get_entry_id($input['email']);
 		}else{
 			# if new entry add to competition entry
 			# add to competition pool
@@ -95,7 +96,10 @@ class Competition extends CI_Controller {
 		echo json_encode(
 					array(
 							'status' => 'ok',
-							'msg' => 'Succesful'
+							'msg' => 'Succesful',
+                                                        'token' => $input['token'],
+                                                        'email' => $input['email'],
+                                                        'entry_id' => $entry_id
 						)
 				);
 		
@@ -133,10 +137,14 @@ class Competition extends CI_Controller {
 		
 	}
 
-	function _insert_invites($entry_id,$data)
+	//function _insert_invites($entry_id,$data)
+        function insert_invites()
 	{
-		$friend_names = $data['friend_name'];
-		$friend_emails = $data['friend_email'];
+                $input = $_POST;
+		//$friend_names = $data['friend_name'];
+		//$friend_emails = $data['friend_email'];
+                $friend_names = $input['friend_name'];
+                $friend_emails = $input['friend_email'];
 		$count = 0;
 		
 		if(count($friend_names) && count($friend_emails)){
@@ -148,7 +156,7 @@ class Competition extends CI_Controller {
 					# add to database and send email to friend
 					if(filter_var($friend_emails[$key],FILTER_VALIDATE_EMAIL)){
 						$invitee_data = array(
-									'entry_id' => $entry_id,
+									'entry_id' => $input['entry_id'],
 									'invitee_name' => $val,
 									'invitee_email' => $friend_emails[$key],
 									);	
@@ -156,11 +164,18 @@ class Competition extends CI_Controller {
 						$count++;
 						
 						# send notification to friend
-						$this->_notify_friend($entry_id,$invitee_data);
+						$this->_notify_friend($input['entry_id'],$invitee_data);
 					}
 				}
 			}
 		}
+                echo json_encode(
+					array(
+							'status' => 'ok',
+							'msg' => 'Succesful'
+                                                        
+						)
+				);
 		return $count;
 	}
 	
@@ -181,8 +196,8 @@ class Competition extends CI_Controller {
 	function _notify_friend($entry_id,$invitee)
 	{
 		# for testing purpose in localhost
-		$this->_local_email($entry_id,$invitee);
-		return;
+		#$this->_local_email($entry_id,$invitee);
+		#return;
 		
 		$inviter = $this->Competition_entry_model->get_entry($entry_id);
 		if($inviter){
