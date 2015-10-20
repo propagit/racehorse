@@ -216,7 +216,7 @@ class Competition extends CI_Controller {
 			$this->email->from('info@propagate.com.au', $inviter['firstname'] . ' ' . $inviter['lastname']);
 			$this->email->to($invitee['invitee_email']);
 			#$this->email->to('kaushtuv@propagate.com.au');
-			$this->email->subject($inviter['firstname'].' Thought you might want to win your own dream Racehorse');
+			$this->email->subject($inviter['firstname'].' thought you might want to win your own Dream Racehorse');
 			$this->email->message($email_content);
 			$this->email->send();
 			$this->email->clear();
