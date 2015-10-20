@@ -50,7 +50,10 @@ h1 {
 .competition-slogan{
   margin-bottom:15px;
 }
-.competition-form-wrap{
+.competition-form-wrap img{
+  margin-bottom:10px;
+}
+.competition-form-wrap p{
   margin-bottom:10px;
 }
 .btn-success {

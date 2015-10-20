@@ -6,7 +6,7 @@
         <img src="<?= base_url(); ?>assets/img/Header.png" width="105%;"/>
     </div>    
 
-    <div class="col-sm-8 col-xs-12 img-wrap x-gutters">
+    <div class="col-sm-7 col-xs-12 img-wrap x-gutters">
         <img src="<?= base_url(); ?>assets/img/HeroPic.png" width="100%;" />
     </div>
 
@@ -14,7 +14,7 @@
 
         
 
-        <div class="col-sm-4 col-xs-12 x-r-gutter competition-form-wrap nopad">
+        <div class="col-sm-5 col-xs-12 x-r-gutter competition-form-wrap nopad">
 
              <img src="<?= base_url(); ?>assets/img/Header-Enter.png" width="100%;" />
              <p class="grey">
