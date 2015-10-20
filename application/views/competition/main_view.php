@@ -14,7 +14,7 @@
 
         
 
-        <div class="col-sm-4 col-xs-12 x-r-gutter competition-form-wrap">
+        <div class="col-sm-4 col-xs-12 x-r-gutter competition-form-wrap nopad">
 
              <img src="<?= base_url(); ?>assets/img/Header-Enter.png" width="100%;" />
              <p class="grey">
@@ -22,7 +22,7 @@
             </p>
             <form id="competition-form">	
 
-                <div class="col-xs-12" style="padding:0px;">
+                <div class="col-xs-12 nopad">
                     <div class="form-group">
                         <input placeholder="your first name..." type="text" class="form-control" name="firstname">
                     </div>
@@ -94,8 +94,8 @@
                 </div>-->
                 <input name="token" type="hidden" value="<?= $token ? $token : ''; ?>">
 
-                <div class="col-xs-12">
-                    <button class="btn btn-success" type="button" id="enter-competition" style="float:right;">Enter</button>
+                <div class="col-xs-12 nopad">
+                    <button class="btn btn-success" type="button" id="enter-competition" style="float:right;">ENTER SITE</button>
                 </div>
                 </form>
             
