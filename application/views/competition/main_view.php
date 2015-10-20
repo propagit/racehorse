@@ -24,21 +24,21 @@
 
                 <div class="col-xs-12 nopad">
                     <div class="form-group">
-                        <input placeholder="your first name..." type="text" class="form-control" name="firstname">
+                        <input placeholder="*your first name..." type="text" class="form-control" name="firstname">
                     </div>
 
                     <div class="form-group">
-                        <input placeholder="your surname..." type="text" class="form-control" name="lastname" >
+                        <input placeholder="*your surname..." type="text" class="form-control" name="lastname" >
                     </div>
                     <div class="form-group">
-                        <input placeholder="your email..." type="text" class="form-control" name="email">
+                        <input placeholder="*your email..." type="text" class="form-control" name="email">
                     </div>
                     <div class="form-group">
                         <input placeholder="your mobile..." type="text" class="form-control" name="mobile">
                     </div>
                     <div class="form-group">
                         <label class="radio-inline">
-                            Previously owned a racehorse?
+                            * Previously owned a racehorse?
                         </label>
                         <label class="radio-inline">                            
                             <input type="radio" name="owned_racehorse" id="owned_racehorseYes" value="Yes">Yes
@@ -49,7 +49,7 @@
                     </div>
                     <div class="form-group">
                         <label class="radio-inline">
-                            Your Gender
+                            * Your Gender
                         </label>
                         <label class="radio-inline">                            
                             <input type="radio" name="gender" id="gender_male" value="M">Male
@@ -60,7 +60,7 @@
                     </div>
                     <div class="form-group">
                         <select class="form-control" name="state">
-                            <option value="" selected>Select State</option> 
+                            <option value="" selected>* Select State</option> 
                             <?php
                             foreach ($states as $state) {
                                 ?>

@@ -10,8 +10,8 @@
   color: #636466; }
 
 p{
-  font-size:20px;
-  line-height: 25px;
+  font-size:18px;
+  line-height: 23px;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
 }
@@ -54,7 +54,7 @@ h1 {
   margin-bottom:10px;
 }
 .competition-form-wrap p{
-  margin-bottom:10px;
+  padding-bottom:10px;
 }
 .btn-success {
     background-color: #c00e38;
@@ -63,6 +63,9 @@ h1 {
     padding: 0;
     font-size: 30px;
     font-weight: 600;
+    border:none;
   }
-
+.form-control{
+  border-radius: 0;
+}
 
