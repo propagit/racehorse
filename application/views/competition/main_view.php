@@ -178,8 +178,6 @@
     }
 
     function enter_competition() {
-        //$('#message-modal-content').html('<i class="fa fa-spinner fa-spin"></i> Please wait while we submit your entry.');
-        //$('#message-modal').modal('show');
         $.ajax({
             type: "POST",
             url: "<?= base_url(); ?>competition/enter_competition",
@@ -200,7 +198,7 @@
                    $('#additional-friends-form').append(html);
                 } else {
                     $('#message-modal-content').html('<span class="text-danger">' + data['msg'] + '</span>');
-                    $('#anyModalFooter').modal('show');
+                    $('#message-modal').modal('show');
                 }
             }
         });
