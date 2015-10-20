@@ -17,7 +17,7 @@
         <div class="col-sm-4 col-xs-12 x-r-gutter competition-form-wrap">
 
              <img src="<?= base_url(); ?>assets/img/Header-Enter.png" width="100%;" />
-             <p>
+             <p class="grey">
                 To celebrate the impending launch of our new site we are giving someone the Dream of racehorse ownership. In conjunction with Dream Thoroughbreds you can become an owner for 2 years in this exciting Sebring filly trained at Caulfield by Ciaron Maher
             </p>
             <form id="competition-form">	

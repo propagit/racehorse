@@ -9,6 +9,12 @@
 .grey, .leading-text {
   color: #636466; }
 
+p{
+  font-size:20px;
+  line-height: 25px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 h1 {
   font-size: 100px;
   line-height: 48px;
@@ -39,5 +45,9 @@ h1 {
 .competition-slogan{
   margin-bottom:15px;
 }
+.competition-form-wrap{
+  padding-bottom:10px;
+}
 
-/*# sourceMappingURL=app.min.css.map */
+
+
