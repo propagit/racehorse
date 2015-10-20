@@ -162,7 +162,6 @@ class Competition extends CI_Controller {
 									);	
 						$this->Competition_invites_model->insert($invitee_data);
 						$count++;
-						
 						# send notification to friend
 						$this->_notify_friend($input['entry_id'],$invitee_data);
 					}
@@ -198,7 +197,6 @@ class Competition extends CI_Controller {
 		# for testing purpose in localhost
 		#$this->_local_email($entry_id,$invitee);
 		#return;
-		
 		$inviter = $this->Competition_entry_model->get_entry($entry_id);
 		if($inviter){
 			
