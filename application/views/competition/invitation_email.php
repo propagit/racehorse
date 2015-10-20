@@ -66,7 +66,7 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <td width="5%" bgcolor="#FFFFFF">&nbsp;</td>
-    <td width="90%" height="35" align="center" valign="middle" bgcolor="#FFFFFF"><span style="font-family:Helvetica, Arial, sans-serif; color:#FFF; line-height:28px; font-size:16px"><img src="<?= base_url(); ?>assets/img/button.jpg" width="637" height="56" /><br />
+    <td width="90%" height="35" align="center" valign="middle" bgcolor="#FFFFFF"><span style="font-family:Helvetica, Arial, sans-serif; color:#FFF; line-height:28px; font-size:16px"><a href="<?=base_url();?>competition/entry/<?=$token;?>" target="_blank"><img src="<?= base_url(); ?>assets/img/button.jpg" width="637" height="56" /></a><br />
     </span></td>
     <td width="5%" bgcolor="#FFFFFF">&nbsp;</td>
   </tr>
