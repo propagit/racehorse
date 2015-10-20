@@ -203,6 +203,7 @@ class Competition extends CI_Controller {
 			$email_data = array(
 							'invitee_firstname' => $invitee['invitee_name'],
 							'inviter_firstname' => $inviter['firstname'],
+                                                        'inviter_lastname' => $inviter['lastname'],
 							'token' => $inviter['user_token']
 							);
 			
@@ -215,7 +216,7 @@ class Competition extends CI_Controller {
 			$this->email->from('info@propagate.com.au', $inviter['firstname'] . ' ' . $inviter['lastname']);
 			$this->email->to($invitee['invitee_email']);
 			#$this->email->to('kaushtuv@propagate.com.au');
-			$this->email->subject('Enter the Competition!');
+			$this->email->subject($invitee['invitee_name']+' Thought you might want to win your own dream Racehorse');
 			$this->email->message($email_content);
 			$this->email->send();
 			$this->email->clear();
