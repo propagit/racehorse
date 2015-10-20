@@ -22,7 +22,7 @@
             </p>
             <form id="competition-form">	
 
-                <div class="col-xs-12">
+                <div class="col-xs-12" style="padding:0px;">
                     <div class="form-group">
                         <input placeholder="your first name..." type="text" class="form-control" name="firstname">
                     </div>
