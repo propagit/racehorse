@@ -14,7 +14,7 @@
 -->
 <link rel="stylesheet" href="<?=base_url();?>assets/css/stylesheet.css" rel="stylesheet" type="text/css">
 <!-- sanspro font -->
-<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,900' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900' rel='stylesheet' type='text/css'>
 
 <!-- jquery for bootstrap -->
 <script src="<?php echo base_url();?>bower_components/jquery/dist/jquery.min.js"></script>

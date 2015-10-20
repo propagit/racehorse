@@ -41,12 +41,16 @@ h1 {
 
 .text-center {
   text-align: center; }
+.nopad{
+  padding:0;
+}
+
 
 .competition-slogan{
   margin-bottom:15px;
 }
 .competition-form-wrap{
-  padding-bottom:10px;
+  margin-bottom:10px;
 }
 
 
