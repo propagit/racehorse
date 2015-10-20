@@ -3,11 +3,11 @@
         <img src="<?= base_url(); ?>assets/img/logo.png"/>        
     </div>
     <div class="col-xs-12 competition-slogan x-gutters">
-        <img src="<?= base_url(); ?>assets/img/Header.png"/>
+        <img src="<?= base_url(); ?>assets/img/Header.png" width="105%;"/>
     </div>    
 
     <div class="col-sm-8 col-xs-12 img-wrap x-gutters">
-        <img src="<?= base_url(); ?>assets/img/HeroPic.png">
+        <img src="<?= base_url(); ?>assets/img/HeroPic.png" width="100%;" />
     </div>
 
 
@@ -15,6 +15,11 @@
         
 
         <div class="col-sm-4 col-xs-12 x-r-gutter competition-form-wrap">
+
+             <img src="<?= base_url(); ?>assets/img/Header-Enter.png" width="100%;" />
+             <p>
+                To celebrate the impending launch of our new site we are giving someone the Dream of racehorse ownership. In conjunction with Dream Thoroughbreds you can become an owner for 2 years in this exciting Sebring filly trained at Caulfield by Ciaron Maher
+            </p>
             <form id="competition-form">	
 
                 <div class="col-xs-12">
